@@ -24,8 +24,8 @@ const Authentication = () => {
                   Way
                 </p>
               </div>
-              {/* <Login/> */}
-              <Register/>
+              <Login/>
+              {/* <Register/> */}
             </Card>
           </div>
         </Grid>

@@ -40,7 +40,7 @@ const Register = () => {
   return (
     <>
       <Formik
-        // validationSchema={validationSchema}
+        validationSchema={validationSchema}
         initialValues={initialValues}
         onSubmit={handleSubmit}
       >

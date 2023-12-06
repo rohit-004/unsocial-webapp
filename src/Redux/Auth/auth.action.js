@@ -5,7 +5,7 @@ import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS, REGISTER_FAILURE, REGISTER
 export const loginUserAction=(loginData)=>async(dispatch)=>{
     dispatch({type:LOGIN_REQUEST})
     try {
-        const {data}=await axios.post(`${API_BASE_URL}/auth/signin`, loginData.data)
+        const {data}=await axios.post(`${API_BASE_URL}auth/signin`, loginData.data)
 
         if (data.jwt) {
             localStorage.setItem("jwt",data.jwt)
@@ -22,7 +22,7 @@ export const loginUserAction=(loginData)=>async(dispatch)=>{
 export const registerUserAction=(loginData)=>async(dispatch)=>{
     dispatch({type:REGISTER_REQUEST})
     try {
-        const {data}=await axios.post(`${API_BASE_URL}/auth/signup`, loginData.data)
+        const {data}=await axios.post(`${API_BASE_URL}auth/signup`, loginData.data)
 
         if (data.jwt) {
             localStorage.setItem("jwt",data.jwt)
