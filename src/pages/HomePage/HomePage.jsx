@@ -7,9 +7,15 @@ import Reels from "../../components/Reels/Reels";
 import CreateReelsForm from "../../components/Reels/CreateReelsForm";
 import Profile from "../Profile/Profile";
 import HomeRight from "../../components/HomeRight/HomeRight";
+import { useSelector } from "react-redux";
+
 
 const HomePage = () => {
   const location = useLocation();
+  const {auth} = useSelector(store=>store)
+
+  console.log("auth ",auth );
+
   return (
     <div className="px-20">
       <Grid container spacing={0}>

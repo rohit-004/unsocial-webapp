@@ -1,7 +1,9 @@
 import { Avatar, Box, Button, Card, Tab, Tabs } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import PostCard from "../../components/Post/PostCard";
 import UserReelsCard from "../../components/Reels/UserReelsCard";
+import { useSelector } from "react-redux";
+import ProfileModal from "./ProfileModal";
 
 const tabs = [
   { value: "post", name: "Post" },
@@ -16,6 +18,10 @@ const savedPost = [1, 1, 1];
 const repost = [1, 1];
 
 const Profile = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpenProfileModal = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const { auth } = useSelector((store) => store);
   const [value, setValue] = React.useState("post");
 
   const handleChange = (event, newValue) => {
@@ -38,7 +44,8 @@ const Profile = () => {
             src="https://cdn.pixabay.com/photo/2020/05/09/19/18/pokemon-5151118_640.jpg"
           />
           {true ? (
-            <Button sx={{ borderRadius: "20px" }} variant="outlined">
+            <Button sx={{ borderRadius: "20px" }} variant="outlined"
+            onClick={handleOpenProfileModal}>
               Edit Profile
             </Button>
           ) : (
@@ -49,8 +56,11 @@ const Profile = () => {
         </div>
         <div className="p-5">
           <div>
-            <h1 className="py-1 font-bold text-xl">Rohit Kandari</h1>
-            <p>@rohitkandari</p>
+            <h1 className="py-1 font-bold text-xl">{auth.user?.firstName + " " + auth.user?.lastName}</h1>
+            <p>@
+                {auth.user?.firstName.toLowerCase() +
+                  "_" +
+                  auth.user?.lastName.toLowerCase()}</p>
           </div>
           <div className="flex gap-5 items-center py-3">
             <span>41 post</span>
@@ -111,6 +121,9 @@ const Profile = () => {
           </div>
         </section>
       </div>
+      <section>
+        <ProfileModal open={open} handleClose={handleClose}/>
+      </section>
     </Card>
   );
 };

@@ -10,6 +10,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { registerUserAction } from "../../Redux/Auth/auth.action";
+import { useNavigate } from "react-router-dom";
 
 const initialValues = {
   firstName: "",
@@ -28,6 +29,9 @@ const validationSchema = Yup.object({
 const Register = () => {
   const [gender, setGender] = useState("");
   const dispatch = useDispatch();
+  const navigate=useNavigate();
+
+
   const handleSubmit = (values) => {
     values.gender=gender;
     console.log("Handle Submit", values);
@@ -142,6 +146,10 @@ const Register = () => {
           </Button>
         </Form>
       </Formik>
+      <div className="flex gap-2 items-center justify-center pt-5">
+        <p>Already have an account?</p>
+        <Button onClick={()=>navigate("/login")}>LOGIN</Button>
+      </div>
     </>
   );
 };
