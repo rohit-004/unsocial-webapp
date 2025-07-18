@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Unsocial Webapp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Client-side of a social media web application.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+*   [Description](#description)
+*   [Installation](#installation)
+*   [Usage](#usage)
+*   [Features](#features)
+*   [Dependencies](#dependencies)
+*   [Contributing](#contributing)
+*   [License](#license)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project is the client-side component of a social media web application. It is built using React and leverages various libraries for UI, state management, and API communication.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To install and run the application, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  **Clone the repository:**
 
-### `npm run build`
+    ```bash
+    git clone https://github.com/rohit-004/unsocial-webapp.git
+    ```
+2.  **Navigate to the project directory:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    cd unsocial-webapp
+    ```
+3.  **Install the dependencies:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm install
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+1.  **Start the development server:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    This will start the application in development mode. Open your browser to `http://localhost:3000` to view it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2.  **Build the application for production:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```bash
+    npm run build
+    ```
 
-## Learn More
+    This will create a production-ready build in the `build` directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Features
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*   User Authentication
+*   Post Creation and Management
+*   Social Feed
+*   User Profiles
+*   Commenting and Liking
+*   [Add more features as the project evolves]
 
-### Code Splitting
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Package                     | Version   | Description                                                                  |
+| --------------------------- | --------- | ---------------------------------------------------------------------------- |
+| @emotion/react              | ^11.11.1 | Designed for high performance style composition.                             |
+| @emotion/styled             | ^11.11.0 | Library to build CSS-in-JS styles.                                         |
+| @mui/icons-material         | ^5.14.19 | Material Design icons for React.                                             |
+| @mui/material               | ^5.14.20 | Material UI components for React.                                            |
+| @testing-library/jest-dom   | ^5.17.0  | Provides DOM testing utilities.                                              |
+| @testing-library/react      | ^13.4.0  | Simple and complete React DOM testing utilities.                             |
+| @testing-library/user-event | ^13.5.0  | Mimics user interactions for testing.                                        |
+| axios                       | ^1.6.2    | Promise based HTTP client for the browser and node.js                        |
+| formik                      | ^2.4.5    | Form library for React.                                                      |
+| react                       | ^18.2.0  | JavaScript library for building user interfaces.                             |
+| react-dom                   | ^18.2.0  | Serves as the entry point to the DOM and server rendering features of React. |
+| react-redux                 | ^8.1.3    | Official React bindings for Redux.                                           |
+| react-router-dom            | ^6.20.1  | DOM bindings for React Router.                                               |
+| react-scripts               | 5.0.1     | Set of scripts and configuration used by Create React App.                   |
+| redux                       | ^4.2.1    | Predictable state container for JavaScript apps.                             |
+| redux-thunk                 | ^2.4.2    | Middleware that allows you to write action creators that return a function. |
+| web-vitals                  | ^2.1.4    | A library for measuring essential metrics for a healthy site.                |
+| yup                         | ^1.3.2    | Schema builder for value parsing and validation.                             |
+| tailwindcss                 | ^3.3.5    | A utility-first CSS framework for rapidly designing custom user interfaces. |
 
-### Analyzing the Bundle Size
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions are welcome! Here's how you can contribute:
 
-### Making a Progressive Web App
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with clear, descriptive messages.
+4.  Push your changes to your fork.
+5.  Submit a pull request to the main repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is currently not licensed. Please add a license file (e.g., MIT, Apache 2.0) to specify the terms under which the project can be used.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Choose a license](https://choosealicense.com/)
